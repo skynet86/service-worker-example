@@ -11,9 +11,9 @@
     e.waitUntil(
       caches.open('ServiceWorkerExample').then(function(cache) {
         return cache.addAll([
-          '/',
-          '/sw-index.html',
-          '/tool-img.png'
+          '/service-worker-example/',
+          '/service-worker-example/sw-index.html',
+          '/service-worker-example/tool-img.png'
         ]);
       })
     );
