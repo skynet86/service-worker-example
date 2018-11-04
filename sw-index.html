@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <h2 id="dt">Service Worker Exmaple</h2>
+        <p id="msg">
+            If you can see this message then your browser does support Service Worker.
+            <br>
+            To check/debug service worker (in chrome), <br>
+            Insepct this page and go to Application --> Service Worker <br>
+            there you can find your service worker and current status. <br> 
+            <br>
+            <img src="tool-img.png" alt="Image not found!!!"/>
+        </p>
+
+        <script>
+            if('serviceWorker' in navigator) {
+                navigator.serviceWorker
+                        .register('bs-sw.js')
+                        .then(function() { console.log("Service Worker Registered"); });
+            }
+            else{
+                document.getElementById("msg").innerHTML = "Sorry, your browser does not support Service Workers...";
+            }         
+        </script>
+    </body>
+</html>
